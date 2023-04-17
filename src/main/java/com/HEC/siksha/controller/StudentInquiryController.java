@@ -25,7 +25,7 @@ public class StudentInquiryController {
         studentInquiryService.createStudentInquiry(studentInquiry);
         return ResponseEntity.ok("Inquiry Added");
     }
-
+    @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping
     public ResponseEntity<List<StudentInquiry>> getAllStudentInquiries() {
         List<StudentInquiry> inquiries = studentInquiryService.getAllStudentInquiries();

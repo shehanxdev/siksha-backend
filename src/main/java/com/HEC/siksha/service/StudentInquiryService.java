@@ -27,6 +27,7 @@ public class StudentInquiryService {
 
     public StudentInquiry updateStudentInquiry( StudentInquiry studentInquiry) {
         StudentInquiry existingStudentInquiry = studentInquiryRepository.findById(studentInquiry.getId().toString()).orElse(null);
+        System.out.println(studentInquiry.getName());
         if (existingStudentInquiry != null) {
             existingStudentInquiry.setName(studentInquiry.getName());
             existingStudentInquiry.setStudentId(studentInquiry.getStudentId());
